@@ -13,8 +13,14 @@ app.get('/', function(request, response) {
   response.render('pages/index');
 });
 
+app.post('/message', function(request, response) {
+  console.log('Received message');
+});
+
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
 });
 
-
+setInterval(function(){
+  console.log(Poll DB);
+}, 10000)
